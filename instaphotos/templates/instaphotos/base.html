@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GeoPhotos</title>
+  </head>
+  <body>
+    <form method="POST" class="post_form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+    {% for url in url_list %}
+        <img src={{url}} alt="Image">
+        <br/>
+    {% endfor %}
+  </body>
+</html>
