@@ -11,5 +11,5 @@ For finding images it uses the Instagram API.
 ## Usage
 1. `cd` to the root of the project
 2. Run the following in the terminal  
-   '''python manage.py runserver'''
+   ```python manage.py runserver```
 3. Head to [localhost](http://localhost:8000 "localhost")
