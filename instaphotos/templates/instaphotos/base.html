@@ -1,7 +1,10 @@
 <!doctype html>
+{% load staticfiles %}
 <html>
   <head>
     <title>GeoPhotos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
   </head>
   <body>
     <form method="POST" class="post_form">
@@ -9,9 +12,12 @@
       {{ form.as_p }}
       <button type="submit">Submit</button>
     </form>
-    {% for url in url_list %}
-        <img src={{url}} alt="Image">
+    <br/>
+    <div id="results" data-url="{{insta_url}}">
+    {% for url_link, url_id in url_list %}
+        <img id={{url_id}} src={{url_link}} alt="Image">
         <br/>
     {% endfor %}
+  </div>
   </body>
 </html>
